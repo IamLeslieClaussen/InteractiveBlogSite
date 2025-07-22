@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { describe, it, expect } from "vitest";
-import Image from "../image";
+import Image from "../Image";
 
 describe("Image Component", () => {
   it("renders image with correct props", () => {
