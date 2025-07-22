@@ -1,5 +1,3 @@
-import React from "react";
-
 interface ImageProps {
   src: string;
   className?: string;
@@ -9,9 +7,12 @@ interface ImageProps {
 }
 
 function Image({ src, className, w, h, alt }: ImageProps) {
+  const imageKitUrl = import.meta.env.VITE_IK_URL_ENDPOINT || '';
+  const imageSrc = imageKitUrl ? `${imageKitUrl}/${src}` : `/${src}`;
+  
   return (
     <img
-      src={`${import.meta.env.VITE_IK_URL_ENDPOINT}/${src}`}
+      src={imageSrc}
       width={w}
       height={h}
       className={className}
