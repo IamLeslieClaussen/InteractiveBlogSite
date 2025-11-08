@@ -1,1 +1,23 @@
 @import "tailwindcss";
+
+.slow-spin {
+  animation: spin 4s linear infinite;
+}
+
+/* Or even slower */
+.very-slow-spin {
+  animation: spin 8s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animatedButton {
+  animation-duration: 10000s;
+}

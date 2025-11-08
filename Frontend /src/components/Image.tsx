@@ -7,9 +7,9 @@ interface ImageProps {
 }
 
 function Image({ src, className, w, h, alt }: ImageProps) {
-  const imageKitUrl = import.meta.env.VITE_IK_URL_ENDPOINT || '';
+  const imageKitUrl = import.meta.env.VITE_IK_URL_ENDPOINT || "";
   const imageSrc = imageKitUrl ? `${imageKitUrl}/${src}` : `/${src}`;
-  
+
   return (
     <img
       src={imageSrc}
